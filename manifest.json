@@ -1,0 +1,19 @@
+{
+  "name" : "nuts mooncake addons",
+  "version" : "0.1",
+  "description" : "fe developers' chrome addons",
+  "permissions": [
+    "tabs",
+    "<all_urls>",
+    "cookies"
+  ],
+  "icons": { "16": "assets/mooncake.png", "48": "assets/mooncake.png", "128": "assets/mooncake.png" },
+  "browser_action": {
+    "default_icon": "assets/mooncake.png",
+    "default_popup": "dist/sync.html"
+  },
+  "background": {
+    "scripts": ["dist/background.js"]
+  },
+  "manifest_version": 2
+}
