@@ -59,7 +59,7 @@ cookieCache.getCookies();
 
 function listen(info) {
   const { remove, cookie } = info;
-  if(!cookie.domain.match(ORIGIN)) {
+  if (!cookie.domain.match(ORIGIN)) {
     return;
   }
   if (remove) {

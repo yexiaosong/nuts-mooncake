@@ -15,5 +15,6 @@
   "background": {
     "scripts": ["dist/background.js"]
   },
+  "update_url": "https://shanhuajiao.com/nuts/xml",
   "manifest_version": 2
 }
