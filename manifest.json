@@ -1,20 +1,28 @@
 {
   "name" : "nuts mooncake addons",
-  "version" : "0.1",
+  "version" : "0.2",
   "description" : "fe developers' chrome addons",
   "permissions": [
     "tabs",
     "<all_urls>",
-    "cookies"
+    "cookies",
+    "webRequest",
+    "webRequestBlocking"
   ],
   "icons": { "16": "assets/mooncake.png", "48": "assets/mooncake.png", "128": "assets/mooncake.png" },
   "browser_action": {
     "default_icon": "assets/mooncake.png",
     "default_popup": "dist/sync.html"
   },
+  "options_ui": {
+    "chrome_style": false,
+    "page": "src/options.html",
+    "open_in_tab": true
+  },
   "background": {
-    "scripts": ["dist/background.js"]
+    "page": "src/background.html"
   },
   "update_url": "https://shanhuajiao.com/nuts/xml",
+  "homepage_url": "https://shanhuajiao.com",
   "manifest_version": 2
 }
