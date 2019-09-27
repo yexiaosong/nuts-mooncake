@@ -7,7 +7,7 @@
  */
 
 const ORIGIN = '.qiniu.com'
-const TARGET = '.eleme.test'
+const TARGET = 'abc.eleme.test'
 
 class CookieClass {
   constructor(originDomain, targetDomain) {

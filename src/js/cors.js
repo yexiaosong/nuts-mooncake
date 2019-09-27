@@ -9,8 +9,11 @@ function listen(response) {
   }, {
     name: 'Access-Control-Allow-Credentials',
     value: 'true',
-  }]
-  responseHeaders.push(...corsList);
+  }];
+  const hasCors = responseHeaders.find(_ => _.name.toLowerCase() === 'access-control-allow-origin');
+  if (!hasCors) {
+    responseHeaders.push(...corsList);
+  }
   return { responseHeaders };
 }
 chrome.webRequest.onBeforeSendHeaders.addListener(
